@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NetKit Labs — Embedded systems libraries</title>
+    <meta
+      name="description"
+      content="Open libraries for MCU, MPU, and edge AI. Netkit for neural inference. Memkit for zero-overhead containers."
+    />
+    <meta property="og:title" content="NetKit Labs" />
+    <meta
+      property="og:description"
+      content="Open libraries for MCU, MPU, and edge AI."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://netkit-labs.github.io/" />
+    <meta
+      property="og:image"
+      content="https://netkit-labs.github.io/assets/logo.png"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="#top" aria-label="NetKit Labs home">
+        <img src="assets/logo.png" width="36" height="36" alt="" />
+        <span>NetKit Labs</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a
+          class="nav-github"
+          href="https://github.com/NetKit-Labs"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-brand">
+        <div class="hero-copy">
+          <p class="hero-brand" id="hero-brand">NetKit Labs</p>
+          <h1 class="hero-title">
+            Software that belongs on the metal.
+          </h1>
+          <p class="hero-lede">
+            Open libraries for MCU, MPU, and edge AI — built for predictable
+            latency, tiny footprints, and C/C++ APIs you can ship in firmware.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/NetKit-Labs"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Open on GitHub</a
+            >
+            <a class="btn btn-ghost" href="#projects">See projects</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg
+            class="hero-svg"
+            viewBox="0 0 640 520"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+          >
+            <defs>
+              <linearGradient id="die" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2a2e36" />
+                <stop offset="100%" stop-color="#15171c" />
+              </linearGradient>
+              <linearGradient id="trace" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#419272" stop-opacity="0" />
+                <stop offset="40%" stop-color="#419272" />
+                <stop offset="100%" stop-color="#6bc4a0" />
+              </linearGradient>
+              <filter id="soft">
+                <feGaussianBlur stdDeviation="18" />
+              </filter>
+            </defs>
+
+            <ellipse
+              class="hero-glow"
+              cx="320"
+              cy="270"
+              rx="220"
+              ry="160"
+              fill="#419272"
+              opacity="0.12"
+              filter="url(#soft)"
+            />
+
+            <!-- PCB plane -->
+            <rect
+              x="70"
+              y="90"
+              width="500"
+              height="340"
+              rx="18"
+              fill="url(#die)"
+              stroke="#2f343e"
+              stroke-width="2"
+            />
+
+            <!-- Grid -->
+            <g stroke="#2a303a" stroke-width="1" opacity="0.7">
+              <path d="M120 140 H520 M120 190 H520 M120 240 H520 M120 290 H520 M120 340 H520 M120 390 H520" />
+              <path d="M170 110 V420 M230 110 V420 M290 110 V420 M350 110 V420 M410 110 V420 M470 110 V420" />
+            </g>
+
+            <!-- Silicon die -->
+            <rect
+              class="die-core"
+              x="220"
+              y="180"
+              width="200"
+              height="160"
+              rx="8"
+              fill="#1a1c21"
+              stroke="#419272"
+              stroke-width="2"
+            />
+
+            <!-- Neural nodes -->
+            <g class="nodes" fill="#419272">
+              <circle cx="250" cy="220" r="5" />
+              <circle cx="290" cy="210" r="4" />
+              <circle cx="330" cy="225" r="5" />
+              <circle cx="370" cy="215" r="4" />
+              <circle cx="260" cy="270" r="4" />
+              <circle cx="310" cy="265" r="6" />
+              <circle cx="360" cy="275" r="4" />
+              <circle cx="280" cy="310" r="5" />
+              <circle cx="340" cy="315" r="5" />
+            </g>
+
+            <g
+              class="synapses"
+              fill="none"
+              stroke="#419272"
+              stroke-width="1.5"
+              opacity="0.55"
+            >
+              <path d="M250 220 L290 210 L330 225 L370 215" />
+              <path d="M250 220 L260 270 L310 265 L360 275" />
+              <path d="M290 210 L310 265 L340 315" />
+              <path d="M330 225 L310 265 L280 310" />
+              <path d="M370 215 L360 275 L340 315" />
+              <path d="M260 270 L280 310" />
+            </g>
+
+            <!-- Signal traces -->
+            <g
+              class="traces"
+              fill="none"
+              stroke="url(#trace)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <path class="trace-a" d="M90 200 H180 V260 H220" />
+              <path class="trace-b" d="M550 300 H460 V240 H420" />
+              <path class="trace-c" d="M160 400 H250 V340" />
+              <path class="trace-d" d="M480 140 H400 V180" />
+            </g>
+
+            <!-- Pads -->
+            <g fill="#419272" opacity="0.85">
+              <rect x="88" y="192" width="14" height="16" rx="2" />
+              <rect x="538" y="292" width="14" height="16" rx="2" />
+              <rect x="152" y="392" width="16" height="14" rx="2" />
+              <rect x="472" y="132" width="16" height="14" rx="2" />
+            </g>
+
+            <text
+              x="320"
+              y="450"
+              text-anchor="middle"
+              fill="#7a847c"
+              font-family="IBM Plex Mono, monospace"
+              font-size="12"
+              letter-spacing="0.18em"
+            >
+              MCU · MPU · NPU
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+          <p>
+            Two libraries. One focus: make serious embedded software easier to
+            ship.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <a
+            class="project"
+            href="https://github.com/NetKit-Labs/netkit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-meta">
+              <span class="project-name">netkit</span>
+              <span class="project-lang">C++26 · C23</span>
+            </div>
+            <p class="project-desc">
+              Embedded-first multi-modal neural network inference for MCU, MPU,
+              and NPU. Float32 and int8 paths, arena allocation, CMSIS-NN /
+              XNNPACK backends, and peer benchmarks against TFLM and TF Lite.
+            </p>
+            <span class="project-cta">View repository →</span>
+          </a>
+
+          <a
+            class="project"
+            href="https://github.com/NetKit-Labs/memkit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-meta">
+              <span class="project-name">memkit</span>
+              <span class="project-lang">C++ · C</span>
+            </div>
+            <p class="project-desc">
+              Zero-overhead containers for bare-metal and RTOS targets. Shared
+              cores behind C++ templates and a type-erased C API — no hidden
+              mutexes, no RTTI, no virtual dispatch on the hot path.
+            </p>
+            <span class="project-cta">View repository →</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <div class="section-head">
+          <h2 id="approach-title">Approach</h2>
+          <p>
+            Designed for firmware constraints first — then made pleasant on the
+            desktop.
+          </p>
+        </div>
+
+        <ul class="pillars">
+          <li>
+            <h3>Predictable memory</h3>
+            <p>
+              Static arenas and explicit buffers. On MCU targets, no heap games
+              — allocation stays under your control.
+            </p>
+          </li>
+          <li>
+            <h3>Dual-language APIs</h3>
+            <p>
+              Modern C++ where it earns its keep; clean C APIs where toolchain
+              reality demands it. Same cores underneath.
+            </p>
+          </li>
+          <li>
+            <h3>Measured on hardware</h3>
+            <p>
+              Bring-up and benchmarks across real boards — STM32, Raspberry Pi,
+              and host CPU — not just simulated comfort.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="assets/logo.png" width="28" height="28" alt="" />
+        <span>NetKit Labs</span>
+      </div>
+      <p>
+        Open source embedded libraries.
+        <a
+          href="https://github.com/NetKit-Labs"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github.com/NetKit-Labs</a
+        >
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
