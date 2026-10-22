@@ -2,8 +2,7 @@
 
 Static site for the [NetKit Labs](https://github.com/NetKit-Labs) organization.
 
-- **Custom domain:** https://netkitlabs.com/
-- **GitHub Pages:** https://netkit-labs.github.io/
+- **Website:** https://netkit-labs.github.io/
 
 ## Local preview
 
@@ -12,16 +11,12 @@ python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-## Custom domain (GoDaddy DNS)
+## Publishing
 
-Point DNS for `netkitlabs.com` at GitHub Pages:
+GitHub Pages publishes the root of the `main` branch. Commit and push changes
+there to trigger the Pages build and deployment. The site uses the default
+`netkit-labs.github.io` hostname.
 
-| Type  | Name | Value                 | TTL  |
-|-------|------|-----------------------|------|
-| A     | `@`  | `185.199.108.153`     | 600  |
-| A     | `@`  | `185.199.109.153`     | 600  |
-| A     | `@`  | `185.199.110.153`     | 600  |
-| A     | `@`  | `185.199.111.153`     | 600  |
-| CNAME | `www`| `netkit-labs.github.io.` | 600 |
-
-Remove any parking / default A or forwarding records that conflict. After DNS propagates, enable **Enforce HTTPS** in the repo Pages settings if it is not already on.
+Project cards and metadata are in `index.html`, presentation in `styles.css`,
+and animation behavior in `main.js`. The canonical URL and social-preview image
+use the same public website address above.
