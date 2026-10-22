@@ -6,7 +6,7 @@
     <title>NetKit Labs — Embedded systems libraries and applications</title>
     <meta
       name="description"
-      content="Open libraries and applications for MCU, MPU, and edge AI. netkit for neural inference, memkit for containers, and kwskit for real-time keyword spotting."
+      content="Open libraries and applications for MCU, MPU, and edge AI. kwskit for keyword spotting, netkit for neural inference, memkit for containers, and npukit for FPGA acceleration."
     />
     <meta property="og:title" content="NetKit Labs" />
     <meta
@@ -214,6 +214,25 @@
         <div class="project-list">
           <a
             class="project"
+            id="kwskit"
+            href="https://github.com/NetKit-Labs/kwskit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-meta">
+              <span class="project-name">kwskit</span>
+              <span class="project-lang">C++20 · Zephyr</span>
+            </div>
+            <p class="project-desc">
+              Real-time keyword spotting on ARM Cortex-M4F. Continuous 16 kHz
+              microphone audio, CMSIS-DSP features, and int8 TensorFlow Lite Micro
+              inference using Zephyr RTOS on the Arduino Nano 33 BLE Sense.
+            </p>
+            <span class="project-cta">View repository →</span>
+          </a>
+
+          <a
+            class="project"
             href="https://github.com/NetKit-Labs/netkit"
             target="_blank"
             rel="noopener noreferrer"
@@ -247,21 +266,21 @@
             </p>
             <span class="project-cta">View repository →</span>
           </a>
+
           <a
             class="project"
-            id="kwskit"
-            href="https://github.com/NetKit-Labs/kwskit"
+            href="https://github.com/NetKit-Labs/npukit"
             target="_blank"
             rel="noopener noreferrer"
           >
             <div class="project-meta">
-              <span class="project-name">kwskit</span>
-              <span class="project-lang">C++20 · Zephyr</span>
+              <span class="project-name">npukit</span>
+              <span class="project-lang">SystemVerilog</span>
             </div>
             <p class="project-desc">
-              Real-time keyword spotting on ARM Cortex-M4F. Continuous 16 kHz
-              microphone audio, CMSIS-DSP features, and int8 TensorFlow Lite Micro
-              inference using Zephyr RTOS on the Arduino Nano 33 BLE Sense.
+              FPGA NPU on PYNQ-Z2 with an 8×8 int8 systolic GEMM array,
+              AXI4-Lite control, and AXI DMA tile transfers. Python host software
+              drives inference and speech-command experiments.
             </p>
             <span class="project-cta">View repository →</span>
           </a>
